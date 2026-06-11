@@ -8,7 +8,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install LaTeX with FontAwesome
+      - name: Install LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y \
