@@ -41,7 +41,7 @@
 % ---------------------------
 \name{CJ}{Nowacek}
 \ifIT
-  \title{IT Support \& Technical Problem Solver — DevOps in Progress}
+  \title{Pipeline Developer — Infrastructure \& Automation}
 \fi
 \ifTechArt
   \title{Technical Artist \& Pipeline Developer}
@@ -60,10 +60,10 @@
 % ---------------------------
 \section{Professional Summary}
 \ifIT
-	\cvitem{}{IT support specialist transitioning toward DevOps development, with a background in workflow automation, Linux and Windows administration, and CI/CD pipelines. Skilled at diagnosing and resolving technical issues, scripting in Python/Bash, and documenting solutions for end users. Experienced in cross-team collaboration, ticketing (Jira/Shotgrid), and process improvements that reduce errors and save time.}
+	\cvitem{}{Pipeline and infrastructure developer for an architectural visualization studio: Python automation, render-farm deployment, and Windows administration. Focused on reliable, unattended automation — silent software deployment, scheduled-task orchestration, and git-based release workflows — alongside Microsoft 365/Azure administration. Background in technical art; shipped SMITE 2 at Hi-Rez Studios.}
 \fi
 \ifTechArt
-	\cvitem{}{Technical Artist specializing in workflow optimization, asset pipelines, and automation for AAA development. Proven efficiency gains through Python, MaxScript, and Maya API tooling; strong collaboration across Animation, Design, and Engineering; and a consistent focus on reliability, usability, and scale.}
+	\cvitem{}{Pipeline and tools developer building the infrastructure behind CG production: Python/PyQt desktop tooling, render-farm automation, and cross-DCC workflows for an architectural visualization studio. Background in character rigging — BFA from the Cleveland Institute of Art, shipped SMITE 2 as an Associate Technical Animator — so tools are built around how artists actually think and work.}
 \fi
 
 % ---------------------------
@@ -71,18 +71,16 @@
 % ---------------------------
 \section{Core Skills}
 \ifIT
-	\cvitem{Infrastructure}{Linux, Windows, macOS; user/device management; permissions; basic shell administration}
-	\cvitem{Networking}{Basic TCP/IP, VPN setup, file sharing, system permissions}
-	\cvitem{Automation}{Python, Bash; batch processing; error-reduction scripts}
-	% \cvitem{CI/CD}{Jenkins (job config, validation, multi-platform builds)}
-	\cvitem{Tools}{Git, Perforce, Jira, Confluence, remote assistance}
-	\cvitem{Support}{Troubleshooting H/W \& S/W, clear documentation, empathetic communication}
+	\cvitem{Infrastructure}{Windows \& Linux administration; Microsoft 365 \& Azure; user/device management; remote access}
+	\cvitem{Automation}{Python, Bash, PowerShell; silent software deployment; scheduled-task orchestration; batch processing}
+	\cvitem{Render Farm}{Deployment and submission automation for 3ds Max render farms}
+	\cvitem{Tools}{Git, Perforce, Jira, Confluence, PyQt}
 \fi
 
 \ifTechArt
-	\cvitem{Programming}{Python (Maya API, PyQt), MaxScript, MEL, Bash, Git, Perforce}
-	\cvitem{DCC/Engines}{Maya, 3ds Max, Unreal Engine 5, Unity, Substance Painter}
-	\cvitem{Focus}{Character rigging, pipeline development, batch tooling, workflow automation}
+	\cvitem{Programming}{Python (PyQt, pymxs, Maya API), MaxScript, MEL, Bash, Git, Perforce}
+	\cvitem{DCC/Engines}{3ds Max, Maya, Unreal Engine 5, Unity, Substance Painter}
+	\cvitem{Focus}{Pipeline development, render-farm automation, character rigging, batch tooling}
 \fi
 
 % ---------------------------
@@ -90,77 +88,84 @@
 % ---------------------------
 \section{Professional Experience}
 
-% Anuttacon via GoDemic (Contract)
-\cventry{Mar--Apr 2024}{Technical Artist (Contract)}{Anuttacon via GoDemic}{Remote}{}{
+% MediaLab 3D Solutions (FTE)
+\cventry{Jul 2026--Present}{CGI Pipeline Developer}{MediaLab 3D Solutions}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
 		\ifIT
-		\item Supported production teams by diagnosing and resolving technical issues across digital workflows
-		\item Created automation scripts (Python/Bash) to reduce repetitive tasks and improve processing speed
-		\item Incorporated user feedback to improve tool usability and reliability; wrote clear usage docs
+		\item Automated remote deployment of 3ds Max and production plugins across the studio's Windows render farm — silent, unattended installs with privilege-elevation handling
+		\item Leading the farm's migration to a modern render-management platform, porting deployment and submission tooling
+		\item Designed a Python scene-automation framework for scene preparation, diagnostics, and farm submission — accessible via CLI, PyQt desktop app, and native 3ds Max integration
+		\item Maintain the git-based packaging and deployment workflow that distributes tools to production
 		      \fi
 		      \ifTechArt
-		\item Developed automated asset tools with iterative feedback integration (Python/MEL)
-		\item Designed optimized asset development pipelines enhancing throughput and reliability
+		\item Designed and built a Python scene-automation framework for scene preparation, diagnostics, and render-farm submission — accessible via CLI, PyQt desktop app, and native 3ds Max integration
+		\item Developed a MaxScript batch-rendering suite that classifies objects across XRef-linked scenes and automatically renders material/finish combinations, replacing a manual per-option workflow with one-click submission
+		\item Built artist-facing tools for the studio's central 3ds Max toolset — lighting, visualization, camera, and export utilities — plus the packaging and deployment workflow that ships them to production
 		      \fi
 	\end{itemize}}
 
-% Hi-Rez Studios (Contract)
-\cventry{Nov 2024--Mar 2025}{Technical Animator (Contract)}{Hi-Rez Studios}{Alpharetta, GA}{}{
+% MediaLab 3D Solutions (Contract, converted to FTE)
+\cventry{Jan--Jul 2026}{MaxScript Specialist (Contract)}{MediaLab 3D Solutions}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\ifIT
-		\item Provided technical support for asset integration, build reliability, and pipeline troubleshooting
-		\item Built Python and MaxScript utilities to automate setup processes
-		      \fi
-		      \ifTechArt
-		\item Ported and reworked characters for Smite 2 in Unreal Engine 5
-		\item Developed Python/MaxScript tools for automatic asset setup within UE5 pipelines
-		\item Collaborated across Animation, Design, QA to ensure milestone delivery
-		      \fi
+		\item Built MaxScript and Python automation for asset processing and repetitive scene operations in 3ds Max; converted to full-time pipeline developer role
+		\item Partnered with the team to identify automation opportunities and deliver maintainable tools
 	\end{itemize}}
 
-% Hi-Rez Studios (FTE)
-\cventry{Aug 2023--Oct 2024}{Associate Rigging Artist}{Hi-Rez Studios}{Alpharetta, GA}{}{
-	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\ifIT
-		\item Troubleshot and resolved complex pipeline and compatibility issues across tools and platforms
-		\item Reduced processing time by \textbf{25\%} via custom scripting and workflow optimization
-		\item Coordinated with multiple teams to meet deadlines under fast-changing requirements
-		      \fi
-		      \ifTechArt
-		\item Ported characters/cosmetics from UE3 to UE5 for Smite 2 production
-		\item Authored MaxScript batch tools, reducing asset processing time by \textbf{25\%}
-		\item Rigged new playable characters and debugged complex rig/skin issues
-		      \fi
-	\end{itemize}}
-
-% Optional: Internship (TechArt emphasis)
-\ifTechArt
-	\cventry{Aug 2022--May 2023}{Rigging Intern}{Hi-Rez Studios}{Alpharetta, GA}{}{
+% Yaggy Trucking (IT emphasis)
+\ifIT
+	\cventry{Nov 2025--Feb 2026}{System Administrator (Contract)}{Yaggy Trucking}{Remote}{}{
 		\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-			\item Weight painted cosmetic assets to production standards under tight schedules
-			\item Built small optimization scripts for frequent rigging tasks
+			\item Administered Microsoft 365 and Azure environments; managed remote access and user accounts
+			\item Automated installation processes and resolved IT issues across users and systems
 		\end{itemize}}
 \fi
 
-% ---------------------------
-% PROJECTS & ACHIEVEMENTS
-% ---------------------------
-\section{Technical Projects \& Achievements}
-
-% Process Automation / Error Reduction
-\cventry{}{Process Automation \& Error Reduction}{Hi-Rez Studios}{}{}{
+% Anuttacon via GoDemic (Contract)
+\cventry{Mar--Apr 2025}{Technical Artist (Contract)}{Anuttacon via GoDemic}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\item Automated conversion pipelines, reducing manual work by \textbf{50\%} and asset-related bugs by \textbf{25\%}
-		      \ifIT
-		\item Documented runbooks and failure modes; improved reproducibility and handoffs
+		\item Developed automated asset-processing tools in Python and MEL, iterating on feedback to improve usability and reliability
+		\item Wrote user documentation and incorporated stakeholder feedback to meet production needs
+	\end{itemize}}
+
+% Hi-Rez Studios (Contract)
+\cventry{Nov 2024--Mar 2025}{Technical Animator (Contract)}{Hi-Rez Studios}{Remote}{}{
+	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+		\item Built Python and MaxScript automation for asset integration and deployment in an Unreal Engine 5 environment, eliminating manual setup and reducing deployment errors
+		\item Collaborated with Animation, Design, and QA to find bottlenecks and automate milestone-delivery steps
+	\end{itemize}}
+
+% Freelance rigging (TechArt emphasis)
+\ifTechArt
+	\cventry{Dec 2023--Present}{Rigging Artist (Freelance)}{Independent}{Remote}{}{
+		\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+			\item Character rigging for original characters and independent projects in Maya, including custom rigs for \textit{Grimmlins Tale}
+		\end{itemize}}
+\fi
+
+% Hi-Rez Studios (FTE)
+\cventry{Jun 2023--Oct 2024}{Associate Technical Animator}{Hi-Rez Studios}{Alpharetta, GA}{}{
+	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+		\item Shipped \textbf{SMITE 2} as part of the technical animation team — character rigging alongside the Python/MaxScript tooling that supported the asset pipeline
+		\ifIT
+		\item Developed automated batch-processing tools in Python and MaxScript, cutting manual asset-processing time by \textbf{25\%} and improving pipeline reliability
+		\item Built automated asset-migration pipelines across engine versions, keeping assets compatible and reducing integration errors
+		\item Wrote documentation and runbooks for automated processes to support team scaling and knowledge transfer
+		      \fi
+		      \ifTechArt
+		\item Built and refined character rigs for SMITE 2, partnering with animation to deliver production-ready assets
+		\item Developed automated batch-processing tools in Python and MaxScript, cutting manual asset-processing time by \textbf{25\%}
+		\item Built automated asset-migration pipelines across engine versions, keeping assets compatible and reducing integration errors
 		      \fi
 	\end{itemize}}
 
-% Tooling for User Support
-\cventry{}{GUI Tooling for Repeatable Processes}{Internal Development}{}{}{
-	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\item Designed GUI-driven tools that made complex workflows accessible to non-technical users
-	\end{itemize}}
+% Internship (TechArt emphasis)
+\ifTechArt
+	\cventry{Aug 2022--May 2023}{Technical Animator Intern}{Hi-Rez Studios}{Remote}{}{
+		\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+			\item Developed Python scripts to automate repetitive production tasks, improving efficiency and reducing manual errors
+			\item Identified workflow inefficiencies and built optimization tools for common bottlenecks
+		\end{itemize}}
+\fi
 
 % ---------------------------
 % EDUCATION
