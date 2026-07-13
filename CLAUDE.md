@@ -13,7 +13,7 @@ CJ Nowacek's dual-profile LaTeX resume. One source file (`master_resume_cjnowace
 ## Commands
 
 ```bash
-make it        # Build IT/DevOps resume -> exports/CJ-Nowacek-IT-Resume.pdf
+make it        # Build Pipeline/IT resume -> exports/CJ-Nowacek-Pipeline-Resume.pdf
 make techart   # Build TechArt resume  -> exports/CJ-Nowacek-TechArt-Resume.pdf
 make clean     # Remove temp files, keep PDFs
 ```
