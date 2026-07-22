@@ -1,0 +1,51 @@
+% teaching_philosophy_cjnowacek.tex
+% One-page teaching philosophy statement for adjunct applications.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.8]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{accent}{RGB}{53, 122, 62}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}
+\titlespacing{\section}{0pt}{14pt}{6pt}
+
+\setlength{\parskip}{8pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+{\huge\bfseries CJ Nowacek}\\[2pt]
+{\large\color{accent} Teaching Philosophy: Character Rigging}\\[2pt]
+{\small cj@cjnowacek.com \textbullet{} cjnowacek.com \textbullet{} (216) 469 0959}
+
+\vspace{6pt}
+\hrule
+\vspace{4pt}
+
+I came to teaching through production. I shipped \textbf{SMITE 2} on Hi-Rez Studios' technical animation team, I rig characters for independent projects, and in my current pipeline role I train working artists on new tools as a regular part of my job: I write the documentation, lead the walkthroughs when a tool is deployed, and run retraining as it evolves. Teaching rigging in a classroom is the natural extension of work I already do and love, and it shapes everything about how I would run a course.
+
+\section{A rig is a user interface}
+The deepest lesson production taught me is that a rig is not a technical exercise: it is a user interface for an animator. A rig succeeds when someone else can pick it up and perform with it. From the first assignment, my students would build for a user, not for a grade: naming conventions someone else can read, controls that behave predictably, and deliverables that survive handoff. The course-long habit I want to build is empathy for the person downstream, because that habit is what studios actually hire for.
+
+\section{Critique is the curriculum}
+At Hi-Rez, every character asset went through regular peer review, and those reviews are where I grew fastest: showing unfinished work early, absorbing specific critique, and learning to give it back constructively. I would make that rhythm the spine of the course. Students present work in progress often, in a structured format, and learn that technical work can be critiqued the way art is: against its purpose, with specifics, and without ego. An art school classroom already knows how to do this for drawing and animation; my job is to show that rigging belongs in the same room.
+
+\section{Automation deepens fundamentals}
+I teach Python as a rigging skill, not a computer science prerequisite. You cannot script a joint-orientation tool you do not understand by hand, so automation becomes a test of fundamentals rather than an escape from them. Students would automate small, repetitive pieces of their own workflow late in the course, and the strongest would take the next step into data-driven rigging: guide-based builds and rig templates, where the rig is described once as data and rebuilt on demand. That is how modern studios rig at scale, it is the path I took from rigging into pipeline development, and it is the practice I keep sharp in my public Maya tools repository. Even students who never write another script leave understanding what the tools they use are doing.
+
+\section{Documentation is proof of understanding}
+Every rig my students ship comes with documentation another person could follow, because explaining a system is the most honest test of understanding it. This mirrors my professional practice, where every tool I deploy ships with docs and a walkthrough, and it quietly teaches the communication skills that separate working riggers from talented hobbyists.
+
+\section{Standing on the shoulders of giants}
+Rigging is a craft that learns in public: GDC talks, community write-ups, and open tool repositories are how working riggers grow, and they are how I grew. My course assigns that living literature from day one, teaches students to reverse-engineer and credit the rigs and techniques they learn from, and asks them to contribute back the same way I do through my public tools and published breakdowns. Students leave knowing the community they are joining, not just the software they are using.
+
+\section{Meeting students where they are}
+I graduated from the Cleveland Institute of Art recently enough to remember exactly which parts of rigging felt impossible from the student side of the desk, and I spent my student years informally helping classmates debug their rigs. As an instructor I would keep that posture: one-on-one, concrete, and patient. And I treat my own teaching the way I treat a tool in production: I ask the users how it is working, and I iterate on the feedback.
+
+\end{document}

@@ -29,6 +29,12 @@ jobs:
       - name: Build References Page
         run: make refs
 
+      - name: Build Teaching Philosophy
+        run: make philosophy
+
+      - name: Build Sample Syllabus
+        run: make syllabus
+
       - name: Upload PDFs
         uses: actions/upload-artifact@v5
         with:

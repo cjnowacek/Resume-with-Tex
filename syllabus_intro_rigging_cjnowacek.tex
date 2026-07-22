@@ -1,0 +1,95 @@
+% syllabus_intro_rigging_cjnowacek.tex
+% Sample course outline for adjunct applications: 15-week intro rigging course.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.85]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{accent}{RGB}{53, 122, 62}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}
+\titlespacing{\section}{0pt}{12pt}{4pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\subsection}{0pt}{8pt}{2pt}
+
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+{\huge\bfseries Introduction to Character Rigging}\\[2pt]
+{\large\color{accent} Sample Course Outline: 15-Week Semester}\\[2pt]
+{\small Instructor: CJ Nowacek \textbullet{} cj@cjnowacek.com \textbullet{} cjnowacek.com}
+
+\vspace{4pt}
+\hrule
+
+\section{Course Description}
+Character rigging is the craft of building the mechanical and deformation systems that let animators perform with a 3D character. This studio course teaches rigging the way production studios practice it: joint placement and skinning fundamentals, FK/IK control systems, animator-ready delivery, and an introduction to Python automation and data-driven rigging. Students build three rigs across the semester, one of them for a partner acting as their animator client, present work in structured critique, and document every rig so another artist can use it. Taught in Autodesk Maya by a working rigger and pipeline developer (SMITE 2, Hi-Rez Studios).
+
+\textbf{Prerequisites:} an introductory 3D course or equivalent familiarity with Maya's interface and basic modeling.
+
+\section{Learning Outcomes}
+By the end of the course, students can:
+\begin{enumerate}[leftmargin=1.5em, itemsep=0pt]
+    \item Place and orient joint hierarchies that deform and mirror cleanly
+    \item Skin and weight a character mesh, and diagnose common deformation problems
+    \item Build FK, IK, and blended control systems with clean, animator-friendly controls
+    \item Gather requirements from another artist and deliver a rig to their specification: consistent naming, organized outliner, working documentation
+    \item Give and receive specific, purposeful critique of technical work
+    \item Automate a repetitive rigging task with Python, and explain how data-driven rig builds work
+\end{enumerate}
+
+\section{Projects}
+\begin{description}[leftmargin=1.5em, itemsep=2pt]
+    \item[Project 1: Mechanical rig (weeks 1--4, 15\%)] A prop or simple machine (piston, lamp, vehicle part). Hierarchies, pivots, constraints, and a first taste of controls, without deformation.
+    \item[Project 2: Client body rig, paired (weeks 5--10, 25\%)] Students pair up and hold both roles at once: each is the rigger for their partner and the animator client for their partner's rig. The animator writes a one-page brief (character, planned performance, control expectations); the rigger builds a biped rig to that spec: joint placement, skinning, FK/IK limbs with switching, reverse foot. Delivery includes the animator's test pass and written usability feedback, which counts toward the rig's grade, followed by one revision round. Learning to rig to another artist's specification is the point.
+    \item[Project 3: Character rig with documentation (weeks 11--15, 25\%)] Extend the body rig with facial controls or rig an original character, plus one small Python automation and a rig manual another artist could follow.
+\end{description}
+
+\section{Weekly Schedule}
+\begin{tabularx}{\textwidth}{@{}p{1.6cm}X@{}}
+\textbf{Week 1} & Orientation to rigging: what a rig is, where rigging sits in the pipeline, and what riggers do in studios. Scene hygiene, naming conventions, the outliner as a deliverable. \textit{Assigned:} watch ``Technical Artist Bootcamp: Zen in the Art of Rigging'' (Brian Venisky, GDC 2018) and read ``What Is Data-Centric Rigging?'' (Miquel Campos, 80.lv) before week 2. \\
+\textbf{Week 2} & Discussion of the assigned talk and article: craft mindset, rigs as systems, rigs as data. Joints: placement, orientation, rotation order, hierarchies, mirroring. \\
+\textbf{Week 3} & Constraints and connections: parent/point/orient constraints, utility nodes, pivots. Controls and zeroed transforms. \\
+\textbf{Week 4} & \textit{Project 1 due; critique.} Reading a rig: reverse-engineering professional rigs. \\
+\textbf{Week 5} & The body plan: joint placement for a biped, spine options, guide-based thinking. \textit{Pairs formed; animator briefs written and exchanged.} \\
+\textbf{Week 6} & Skinning I: binding, weight painting strategy, mirroring weights. \\
+\textbf{Week 7} & IK vs FK: solvers, pole vectors, when animators want each. \\
+\textbf{Week 8} & IK/FK switching and space switching. \textit{Midterm critique of client rigs in progress, with each rig's animator in the room.} \\
+\textbf{Week 9} & Feet and hands: reverse foot, finger controls. Skinning II: deformation quality, twist distribution. \\
+\textbf{Week 10} & \textit{Project 2 due.} Client review: animators present test passes on their rigger's rig and deliver written usability feedback; revision round begins. \\
+\textbf{Week 11} & Facial rigging survey: blendshapes vs joint-based, combination systems, control layouts. \textit{Project 2 revisions due.} \\
+\textbf{Week 12} & Building the face or original-character rig; animator UX, picker layouts, visibility switching. \\
+\textbf{Week 13} & Python for riggers I: the Script Editor, \texttt{maya.cmds}, automating one repetitive step from your own workflow. \\
+\textbf{Week 14} & Python for riggers II and data-driven rigging: guide-based builds, rig templates, and rebuilding a rig from data, returning to the week 1 reading now that students have built rigs by hand. Documentation workshop. \\
+\textbf{Week 15} & \textit{Project 3 and rig manual due. Final critique} and portfolio framing: presenting rigging work to studios. \\
+\end{tabularx}
+
+\section{Evaluation}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+Project 1: Mechanical rig & 15\% \\
+Project 2: Client body rig (paired) & 25\% \\
+Project 3: Character rig and documentation & 25\% \\
+Weekly exercises & 20\% \\
+Critique participation (giving and receiving) & 15\% \\
+\end{tabularx}
+
+Rigs are graded against their purpose: does it deform well, can an animator use it, is it organized so a teammate could maintain it. Broken-but-ambitious beats safe-but-empty; the write-up of what went wrong is part of the work.
+
+\section{Materials and Policies}
+\textbf{Software:} Autodesk Maya (free education license). Provided: body mesh for Project 2, example rigs, and starter scenes. \textbf{Late work:} one automatic 48-hour extension per semester, no questions asked; otherwise 10\% per day, because animators downstream depend on rig delivery dates. \textbf{Integrity and accessibility:} institutional policies apply; students who need accommodations are encouraged to talk to me early. \textit{(Adapt this section to the host institution's required language.)}
+
+\vspace{8pt}
+\hrule
+\vspace{4pt}
+{\small This outline is a sample prepared for application purposes and adapts readily to 10-week terms, different DCCs, or a games-focused variant with engine export and runtime constraints.}
+
+\end{document}

@@ -8,6 +8,12 @@ CV_OUT := exports/CJ-Nowacek-Rigging-Instructor-CV.pdf
 REFS_TEX := references_cjnowacek.tex
 REFS_BASE := references_cjnowacek
 REFS_OUT := exports/CJ-Nowacek-References.pdf
+PHIL_TEX := teaching_philosophy_cjnowacek.tex
+PHIL_BASE := teaching_philosophy_cjnowacek
+PHIL_OUT := exports/CJ-Nowacek-Teaching-Philosophy.pdf
+SYL_TEX := syllabus_intro_rigging_cjnowacek.tex
+SYL_BASE := syllabus_intro_rigging_cjnowacek
+SYL_OUT := exports/CJ-Nowacek-Intro-Rigging-Syllabus.pdf
 
 LATEXMK := latexmk -pdf -interaction=nonstopmode -halt-on-error
 
@@ -22,7 +28,7 @@ else
     OPEN_CMD := start
 endif
 
-.PHONY: it techart cv refs clean realclean open-it open-techart open-cv help
+.PHONY: it techart cv refs philosophy syllabus clean realclean open-it open-techart open-cv help
 
 # Default target shows help
 help:
@@ -31,6 +37,8 @@ help:
 	@echo "  make techart     - Build Technical Artist resume"
 	@echo "  make cv          - Build rigging-instructor teaching CV"
 	@echo "  make refs        - Build references page (placeholder template)"
+	@echo "  make philosophy  - Build teaching philosophy statement"
+	@echo "  make syllabus    - Build sample rigging course syllabus"
 	@echo "  make open-it     - Build and open IT resume"
 	@echo "  make open-techart- Build and open TechArt resume"
 	@echo "  make clean       - Remove temp files (keep PDFs)"
@@ -74,6 +82,24 @@ refs:
 	@echo "✓ Successfully built $(REFS_OUT)"
 	@latexmk -c $(REFS_TEX)
 
+philosophy:
+	@echo "Building teaching philosophy..."
+	@mkdir -p exports
+	@$(LATEXMK) $(PHIL_TEX) || { echo "❌ LaTeX compilation failed"; exit 1; }
+	@test -f $(PHIL_BASE).pdf || { echo "❌ PDF not generated"; exit 1; }
+	@cp $(PHIL_BASE).pdf $(PHIL_OUT)
+	@echo "✓ Successfully built $(PHIL_OUT)"
+	@latexmk -c $(PHIL_TEX)
+
+syllabus:
+	@echo "Building sample syllabus..."
+	@mkdir -p exports
+	@$(LATEXMK) $(SYL_TEX) || { echo "❌ LaTeX compilation failed"; exit 1; }
+	@test -f $(SYL_BASE).pdf || { echo "❌ PDF not generated"; exit 1; }
+	@cp $(SYL_BASE).pdf $(SYL_OUT)
+	@echo "✓ Successfully built $(SYL_OUT)"
+	@latexmk -c $(SYL_TEX)
+
 open-it: it
 	@${OPEN_CMD} $(IT_OUT) 2>/dev/null || echo "⚠️  Could not open PDF. Find it at: $(IT_OUT)"
 
@@ -90,5 +116,5 @@ clean:
 
 realclean:
 	@latexmk -C
-	@rm -f profile_toggle.tex $(IT_OUT) $(TA_OUT) $(CV_OUT) $(REFS_OUT)
+	@rm -f profile_toggle.tex $(IT_OUT) $(TA_OUT) $(CV_OUT) $(REFS_OUT) $(PHIL_OUT) $(SYL_OUT)
 	@echo "✓ Removed all generated files"
